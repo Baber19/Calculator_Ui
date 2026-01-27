@@ -14,7 +14,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: CalculatorApp());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: CalculatorApp(),
+    );
   }
 }
 
@@ -76,10 +79,14 @@ class _CalculatorAppState extends State<CalculatorApp> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      indexSelected == 1 ? Colors.white70 : Colors.teal,
+                    ),
+                  ),
                   onPressed: () {
                     setState(() {
                       indexSelected = 1;
-                      calculation();
                     });
                   },
                   child: Center(child: Text("+")),
@@ -88,7 +95,6 @@ class _CalculatorAppState extends State<CalculatorApp> {
                   onPressed: () {
                     setState(() {
                       indexSelected = 2;
-                      calculation();
                     });
                   },
                   child: Center(child: Text("-")),
@@ -97,7 +103,6 @@ class _CalculatorAppState extends State<CalculatorApp> {
                   onPressed: () {
                     setState(() {
                       indexSelected = 3;
-                      calculation();
                     });
                   },
                   child: Center(child: Text("*")),
@@ -106,7 +111,6 @@ class _CalculatorAppState extends State<CalculatorApp> {
                   onPressed: () {
                     setState(() {
                       indexSelected = 4;
-                      calculation();
                     });
                   },
                   child: Center(child: Text("/")),
@@ -116,15 +120,17 @@ class _CalculatorAppState extends State<CalculatorApp> {
             SizedBox(height: 10),
             Text("$result", style: TextStyle(fontSize: 24)),
             SizedBox(height: 10),
-            Container(
-              height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.teal
+            InkWell(
+              onTap: () {
+                calculation();
+              },
+              child: Container(
+                height: 200,
+                width: double.infinity,
+                decoration: BoxDecoration(color: Colors.teal),
+                child: Center(child: Text("Calculate")),
               ),
-              child: Text(data),
-            )
-            
+            ),
           ],
         ),
       ),
