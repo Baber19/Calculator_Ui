@@ -94,7 +94,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                      indexSelected == 1 ? Colors.teal : Colors.white70,
+                      indexSelected == 2 ? Colors.teal : Colors.white70,
                     ),
                   ),
                   onPressed: () {
