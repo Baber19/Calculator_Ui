@@ -117,8 +117,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 ),
               ],
             ),
-            SizedBox(height: 10),
-            Text("$result", style: TextStyle(fontSize: 24)),
+
             SizedBox(height: 10),
             InkWell(
               onTap: () {
@@ -131,6 +130,8 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 child: Center(child: Text("Calculate")),
               ),
             ),
+            SizedBox(height: 10),
+            Text("$result", style: TextStyle(fontSize: 24)),
           ],
         ),
       ),
