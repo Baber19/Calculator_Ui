@@ -81,7 +81,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                      indexSelected == 1 ? Colors.white70 : Colors.teal,
+                      indexSelected == 1 ? Colors.teal : Colors.white70,
                     ),
                   ),
                   onPressed: () {
@@ -92,6 +92,11 @@ class _CalculatorAppState extends State<CalculatorApp> {
                   child: Center(child: Text("+")),
                 ),
                 ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      indexSelected == 1 ? Colors.teal : Colors.white70,
+                    ),
+                  ),
                   onPressed: () {
                     setState(() {
                       indexSelected = 2;
@@ -100,6 +105,11 @@ class _CalculatorAppState extends State<CalculatorApp> {
                   child: Center(child: Text("-")),
                 ),
                 ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      indexSelected == 1 ? Colors.teal : Colors.white70,
+                    ),
+                  ),
                   onPressed: () {
                     setState(() {
                       indexSelected = 3;
