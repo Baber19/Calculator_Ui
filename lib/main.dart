@@ -137,6 +137,9 @@ class _CalculatorAppState extends State<CalculatorApp> {
             InkWell(
               onTap: () {
                 calculation();
+                setState(() {
+
+                });
               },
               child: Container(
                 height: 200,
