@@ -70,7 +70,6 @@ class _CalculatorAppState extends State<CalculatorApp> {
             TextField(
               controller: no2,
               decoration: InputDecoration(
-                helperText: "PL",
                 hintText: "Enter second no",
                 border: OutlineInputBorder(),
               ),
