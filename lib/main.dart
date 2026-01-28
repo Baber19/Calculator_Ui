@@ -149,7 +149,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
               ),
             ),
             SizedBox(height: 10),
-            Text("$result", style: TextStyle(fontSize: 24)),
+            Text("$result", style: TextStyle(fontSize: 28)),
           ],
         ),
       ),
