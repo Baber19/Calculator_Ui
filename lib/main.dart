@@ -62,6 +62,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
             TextField(
               controller: no1,
               decoration: InputDecoration(
+                labelText: "Number 1",
                 hintText: "Enter first no",
                 border: OutlineInputBorder(),
               ),
