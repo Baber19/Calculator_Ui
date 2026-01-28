@@ -71,6 +71,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
             TextField(
               controller: no2,
               decoration: InputDecoration(
+                labelText: "Number 2",
                 hintText: "Enter second no",
                 border: OutlineInputBorder(),
               ),
@@ -138,9 +139,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
             InkWell(
               onTap: () {
                 calculation();
-                setState(() {
-
-                });
+                setState(() {});
               },
               child: Container(
                 height: 200,
