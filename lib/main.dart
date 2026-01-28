@@ -76,7 +76,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
             ),
             SizedBox(height: 10),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
                   style: ButtonStyle(
