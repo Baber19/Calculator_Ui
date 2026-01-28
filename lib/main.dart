@@ -74,7 +74,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 11),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
